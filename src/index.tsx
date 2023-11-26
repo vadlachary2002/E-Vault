@@ -10,8 +10,6 @@ import configureAppStore, { getPreloadedState } from './store/configureStore';
 import AppContextProvider from './contexts/AppContextProvider';
 
 import App from './pages/App/App';
-import { Navbar } from './components';
-import { BrowserRouter } from 'react-router-dom';
 
 (async () => {
     const preloadedState = getPreloadedState();

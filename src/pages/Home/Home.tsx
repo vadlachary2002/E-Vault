@@ -1,10 +1,11 @@
 import React from 'react';
 import { ErrorBoundary } from '@components/ErrorBoundary';
+import './Home.scss';
 
 const Home = () => {
     return (
         <ErrorBoundary>
-            <div>Home Page</div>
+            <div className="home">Home Page</div>
         </ErrorBoundary>
     );
 };

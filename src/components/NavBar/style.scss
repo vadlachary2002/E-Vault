@@ -1,18 +1,19 @@
 .navbar{
-  padding: 8px 10px;
+  padding: 5px 10px;
   background-color: #fefefe;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #3E7898;
   box-shadow: #555 0px 1px 5px 0px, #afafaf 2px  1px 5px 2px;
   .heading{
     display: flex;
     flex-direction: column;
-    h1{
-      font-size: 24px;
-      font-family: 'Times New Roman', Times, serif;
-      color: #020202;
-    }
+    max-width: 200px;
+    padding: 10px;
+    cursor: pointer;
+    align-items: center;
+    color: #fefefe;
   }
   .listitems{
     display: flex;
@@ -28,7 +29,7 @@
         width: 100%;
         text-align: center;
         padding: 5px 10px;
-        color:#202020;
+        color:#efeefe ;
         border-radius: 2px;
         border-bottom: 2px solid transparent;
       }
@@ -38,15 +39,15 @@
       }
     }
     li a:hover{
-      border-bottom: 2px solid blue;
-      color: rgb(46, 46, 223);
+      border-bottom: 2px solid #fff;
+      color: #fff
     }
     li .active{
       width: 100%;
       text-align: center;
       padding: 5px 10px;
-      color: rgb(46, 46, 223);
-      border-bottom: 2px solid blue;
+      color: #fff;
+      border-bottom: 2px solid #fff;
       border-radius: 2px;
     }
   }

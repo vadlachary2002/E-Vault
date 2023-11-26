@@ -1,16 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { ErrorBoundary } from '@components/ErrorBoundary';
-import '../../styles/NavBar/style.scss';
+import Logo from './logo.png';
+import './style.scss';
 
 const NavBar = () => {
     return (
         <ErrorBoundary>
             <div className="navbar">
                 <div className="heading">
-                    {' '}
-                    <h1>E-Vault</h1>{' '}
-                    <small>A blockchain based document management system</small>
+                    <img src={Logo} />
                 </div>
                 <ul className="listitems">
                     <li>
