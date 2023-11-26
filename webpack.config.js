@@ -43,7 +43,7 @@ module.exports =  (env, options)=> {
                     loader: 'babel-loader'
                 },
                 {
-                    test: /\.css$/i,
+                    test: /\.(css|sass|scss)$/i,
                     // include: path.resolve(__dirname, 'src'),
                     use: [
                         devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -55,7 +55,13 @@ module.exports =  (env, options)=> {
                         }, 
                         {
                             loader: 'postcss-loader'
-                        }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true,
+                            },
+                        },
                     ],
                 },
                 { 

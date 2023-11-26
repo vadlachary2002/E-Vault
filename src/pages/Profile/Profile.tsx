@@ -1,12 +1,12 @@
 import React from 'react';
 import { ErrorBoundary } from '@components/ErrorBoundary';
 
-const Home = () => {
+const Profile = () => {
     return (
         <ErrorBoundary>
-            <div>Home Page</div>
+            <div>Profile Page</div>
         </ErrorBoundary>
     );
 };
 
-export default Home;
+export default Profile;
