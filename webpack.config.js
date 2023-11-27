@@ -36,6 +36,9 @@ module.exports =  (env, options)=> {
                 '@utils': path.resolve(__dirname, 'src/utils/'),
             },
         },
+        devServer:{
+            historyApiFallback: true,
+        },
         module: {
             rules: [
                 {

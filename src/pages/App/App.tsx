@@ -1,7 +1,7 @@
 import React from 'react';
 import { ErrorBoundary } from '@components/ErrorBoundary';
 import { Navbar } from '@components/index';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { Home, Login, Profile, MyDocs } from '../../pages';
 const App = () => {
