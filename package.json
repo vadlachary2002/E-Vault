@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "adaalat",
   "version": "1.0.0",
-  "description": "Start React+Redux project with TypeScript in an easier and faster way",
+  "description": "A blockchain based document management system",
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
