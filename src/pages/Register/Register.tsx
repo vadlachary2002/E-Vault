@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Register.scss';
 import { useNavigate } from 'react-router-dom';
+import { PrimaryButton, SecondaryButton } from '@components/Buttons/Buttons';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -90,8 +91,8 @@ const Register = () => {
           </div>
         </div>
         <div className="bottom">
-          <input type="button" value="Cancel" onClick={goBack} />
-          <input type="submit" value="Register" />
+          <SecondaryButton name="Cancel" onClick={goBack} type="button" />
+          <PrimaryButton name="Register" onClick={null} type="submit" />
         </div>
       </form>
     </div>

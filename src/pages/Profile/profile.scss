@@ -1,0 +1,120 @@
+.profilePage{
+  padding: 20px;
+  // background-color: red;
+  .head{
+    padding: 10px;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    .col{
+      display: flex;
+      gap: 1rem;
+      flex: 1 1 300px;
+      img{
+        width: 120px;
+        height: 120px;
+        border-radius: 4px;
+        background-color: #3E7898;
+      }
+      h1{
+        font-size: 22px;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+        color: #3E7898;
+      }
+      span{
+        color: #3E7898;
+        font-weight: 500;
+      }
+    }
+    .search{
+      display: flex;
+      gap: .5rem;
+      flex: 1 1 60%;
+      margin-top: 15px;
+      justify-content:center;
+      input, button, select{
+        height: max-content;
+        padding: 5px 10px;
+        font-size: 18px;
+        
+      }
+      input{
+        flex: 1 1 320px;
+        border-radius: 4px;
+        outline: none;
+        color: #3E7898;
+        box-shadow: #efefef 0px 0px 5px 0px, #555 0px  2px 5px 0px;
+      }
+      button{
+        flex: 1 1 60px;
+      }
+      select{
+        flex: 1 1 60px;
+        border-radius: 4px;
+        outline: none;
+        box-shadow: #efefef 0px 0px 5px 0px, #555 0px  2px 5px 0px;
+      }
+    }
+
+  }
+  .body{
+    margin-top: 10px;
+    padding: 0px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    .head{
+      background-color: #3E7898;
+      display: flex;
+      .col{
+        padding: 5px;
+        display: flex;
+        color: #fff;
+        font-weight: 600;
+        justify-content: center;
+      }
+    }
+    .list{
+      padding: 5px ;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border:1px solid #3E7898;
+      border-radius: 0 0 4px 4px;
+      .each{
+        color: #3E7898;
+        font-weight: 500;
+        background-color: #fefefe;
+        box-shadow: #efefef 0px 0px 3px 0px, #555 0px  2px 5px 0px;
+        padding: 5px;
+        display: flex;
+        width: 96%;
+        justify-content: center;
+        margin: 5px auto;
+        align-items: center;
+        div{
+          display: flex;
+          justify-content: center;
+          flex: 1 1 60px;
+        }
+        .status{
+          padding: 8px;
+          background-color:#3E7898;
+          border-radius: 4px;
+          color: #efefef;
+          margin-top: 5px;
+          cursor: pointer;
+        }
+        div img{
+          width: 40px;
+          height: 40px;
+          background-size: contain;
+          border-radius: 5px;
+          background-color: #3E7898;
+        }
+      }
+    }
+    
+
+  }
+}
