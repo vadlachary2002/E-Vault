@@ -5,12 +5,12 @@ import MapViewContainer from '@components/MapView/MapViewContainer';
 import WebMapSelector from '@components/WebMapSelector/WebMapSelector';
 
 export const ArcGISMapDemo = () => {
-    return (
-        <>
-            <ErrorBoundary>
-                <MapViewContainer />
-                <WebMapSelector />
-            </ErrorBoundary>
-        </>
-    );
+  return (
+    <>
+      <ErrorBoundary>
+        <MapViewContainer />
+        <WebMapSelector />
+      </ErrorBoundary>
+    </>
+  );
 };
