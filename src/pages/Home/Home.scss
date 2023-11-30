@@ -18,7 +18,7 @@ body{
     display: none;
   }
   .box,.right{
-    height: 450px;
+    height: 420px;
   }
   .boxnone{
     display: none;
@@ -51,7 +51,6 @@ body{
     align-items: center;
     display: flex;
     min-width: 350px;
-    background-color: #efefef;
     .minibox{
       display: flex;
       padding: 10px;

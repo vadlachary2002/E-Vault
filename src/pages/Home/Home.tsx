@@ -24,7 +24,7 @@ const Home = () => {
                         <img className="logo" src={Logo} alt="logo2" />
                         <img src={Logoname} alt="logo" />
                         <div className="text">
-                            Leadingthe way in legal excellance
+                            Leading the way in legal excellance
                         </div>
                     </div>
                     <div
@@ -43,7 +43,10 @@ const Home = () => {
                             <input type="submit" value="Login" />
                             <div className="links">
                                 <a href="/forgotpass">Forgot Password?</a>
-                                <a href="/register">Register</a>
+                                <a href="/register">
+                                    {' '}
+                                    <b>Register</b>
+                                </a>
                             </div>
                         </div>
                     </div>
