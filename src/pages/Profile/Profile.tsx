@@ -61,7 +61,6 @@ const Profile = () => {
               <span> 20 connections</span>
             </div>
           </div>
-
           <div className="search">
             <input type="text" placeholder="search" />
             <PrimaryButton name="Search" onClick={null} type="button" />
@@ -84,7 +83,6 @@ const Profile = () => {
             {profiles.map((profile, index) => (
               <div className="each" key={index}>
                 <div>
-                  {' '}
                   <img src={profile.imgUrl} alt="" />
                 </div>
                 <div>{profile.name}</div>

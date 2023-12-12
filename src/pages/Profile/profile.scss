@@ -66,6 +66,7 @@
     .head{
       background-color: #3E7898;
       display: flex;
+      flex-wrap: nowrap;
       .col{
         padding: 5px;
         display: flex;

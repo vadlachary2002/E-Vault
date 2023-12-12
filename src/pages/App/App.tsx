@@ -3,7 +3,7 @@ import { ErrorBoundary } from '@components/ErrorBoundary';
 import { Navbar } from '@components/index';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { Home, Login, Profile, MyDocs, Register } from '../../pages';
+import { Home, Login, Profile, MyDocs, Register, Dashboard } from '../../pages';
 const App = () => {
   return (
     <ErrorBoundary>
@@ -15,6 +15,7 @@ const App = () => {
           <Route path="/mydocs" element={<MyDocs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </ErrorBoundary>

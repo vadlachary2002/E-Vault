@@ -1,0 +1,43 @@
+.userDashboard {
+  display: flex;
+  justify-content: space-between;
+}
+.userDashboard .listItems{
+  position: sticky;
+  top:20px;
+  height: max-content;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.userDashboard .listItems h1{
+  margin: 100px 0px 0px 10px;
+  font-weight: bold;
+  text-align: center;
+  padding:6px;
+}
+.userDashboard .listItems ul{
+  width: 100%;
+  text-align: center;
+}
+.userDashboard .listItems ul li{
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  color: #0064a9;
+}
+.userDashboard .listItems ul .active{
+  background-color: #cecece;
+  color: #0064a9;
+  font-weight:600;
+}
+.userDashboard .down{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.register{
+  flex: 70%;
+}

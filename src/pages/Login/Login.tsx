@@ -1,12 +1,9 @@
 import React from 'react';
 import { ErrorBoundary } from '@components/ErrorBoundary';
+import Home from '../Home/Home';
 
 const Login = () => {
-  return (
-    <ErrorBoundary>
-      <div>Login page</div>
-    </ErrorBoundary>
-  );
+  return <Home />;
 };
 
 export default Login;
