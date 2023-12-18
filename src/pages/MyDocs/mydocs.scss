@@ -112,6 +112,9 @@
         font-weight: 600;
         .docimage{
           padding: 10px;
+          img{
+            max-width: 100px;
+          }
         }
         .box{
           background-color: #fefefe;

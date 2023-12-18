@@ -1,10 +1,17 @@
 .page{
   .func{
-    max-width: 400px;
     padding: 15px;
+    width: max-content;
     background-color: #fff;
     margin:20px auto;
     box-shadow: #222 0px 1px 8px 0px, #aeaeae 2px  1px 5px 2px;
+    display: flex;
+    gap: 1rem;
+    input{
+      padding: 8px 12px;
+      outline: none;
+      border-bottom: 1px solid #aeaeae;
+    }
     button{
       background-color: rgb(25, 128, 197);
       border-radius: 4px;
