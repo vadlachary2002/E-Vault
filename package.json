@@ -82,6 +82,8 @@
   },
   "dependencies": {
     "@arcgis/core": "^4.28.9",
+    "@danmarshall/deckgl-typings": "^3.0.0",
+    "@deck.gl/react": "^8.9.33",
     "@react-google-maps/api": "^2.19.2",
     "@reduxjs/toolkit": "1.8",
     "@types/google-map-react": "^2.1.10",
@@ -94,6 +96,7 @@
     "helper-toolkit-ts": "^1.1.13",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-map-gl": "^7.1.6",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.20.0",
     "redux": "^4.1.0",

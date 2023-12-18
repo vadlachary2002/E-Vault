@@ -11,12 +11,16 @@ import {
 } from '@react-google-maps/api';
 import { GOOGLE_API } from '../../config';
 
-const Login = () => {
+const Login = (props: any) => {
   const containerStyle = {
     width: '100%',
     height: '400px',
   };
-
+  const location = {
+    address: '1600 Amphitheatre Parkway, Mountain View, california.',
+    lat: 37.42216,
+    lng: -122.08427,
+  };
   const center = {
     lat: 48.745,
     lng: 38.523,
