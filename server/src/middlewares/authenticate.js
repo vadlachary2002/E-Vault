@@ -5,7 +5,7 @@ const { User } = require("../models");
 const ApiError = require("../utils/ApiError");
 
 const authenticate = catchAsync(async (req, res, next) => {
-  const { jwtoken, email, staffId } = req.cookies;
+  const { jwtoken, email } = req.cookies;
   if(!jwtoken) throw new ApiError(401,'token does not exist or expired');
   await jwt.verify(jwtoken,config.jwtkey,async (err,token) => {
     if(err) throw new ApiError(401,'invalid token');
