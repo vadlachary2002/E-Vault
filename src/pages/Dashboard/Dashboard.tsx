@@ -2,18 +2,23 @@ import React, { useState } from 'react';
 import './dashboard.scss';
 import { ChangePassword, PrivateKey } from './Tabs';
 import Register from '../Register/Register';
+import { User } from '../../models/User';
 
-const defaultUser = {
-  firstName: 'nagaraju',
-  lastName: 'chary',
-  userType: 'Lawyer',
-  gender: 'Male',
-  mobile: 7702091588,
-  adhar: 512045089268,
-  email: 'chary@gmail.com',
+const defaultUser: User = {
+  firstname: '',
+  lastname: '',
+  userType: '',
+  gender: '',
+  mobile: null,
+  adhar: null,
+  email: '',
+  password: '',
+  profileImage: '',
 };
 const Dashboard = () => {
   const [tab, setTab] = useState('edit');
+  const [user, setUser] = useState(defaultUser);
+
   return (
     <div>
       <div className="userDashboard">
