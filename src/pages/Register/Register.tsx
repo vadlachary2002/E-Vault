@@ -2,43 +2,62 @@ import React, { useState } from 'react';
 import './Register.scss';
 import { useNavigate } from 'react-router-dom';
 import { PrimaryButton, SecondaryButton } from '@components/Buttons/Buttons';
-interface User {
-  firstName: string;
-  lastName: string;
-  userType: string;
-  gender: string;
-  mobile: number;
-  adhar: number;
-  email: string;
-}
+import { User } from '../../models/User';
+import { register } from '@services/User';
+
 interface RegisterProps {
   isEdit?: boolean;
   user?: User;
 }
-const defaultUser = {
-  firstName: '',
-  lastName: '',
+const defaultUser: User = {
+  firstname: '',
+  lastname: '',
   userType: '',
   gender: '',
-  mobile: '',
-  adhar: '',
+  mobile: null,
+  adhar: null,
   email: '',
+  password: '',
+  profileImage: '',
 };
 const Register = (props: RegisterProps) => {
   const { isEdit, user } = props;
   const [userDetails, setUserDetails] = useState(user ? user : defaultUser);
   const navigate = useNavigate();
   const [file, setFile] = useState(null);
+  const [fileUrl, setFileUrl] = useState(
+    userDetails.profileImage ? userDetails.password : './uploads/default.jpg'
+  );
   const updateImage = (file: any) => {
     const url = URL.createObjectURL(file);
-    setFile(url);
+    setFile(() => {
+      setFileUrl(url);
+      return file;
+    });
+  };
+  const updateUserDetails = (e: any) => {
+    setUserDetails((prevUser) => {
+      return {
+        ...prevUser,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
+  const onSubmit = async (e: any) => {
+    e.preventDefault();
+    const { error, data, code } = await register(userDetails, file);
+    if (error) {
+      console.log('Error');
+      return;
+    }
+    console.log(data, code);
   };
   const goBack = () => {
     navigate(-1);
   };
   return (
     <div className="register">
-      <form className="registerBox">
+      <form className="registerBox" onSubmit={onSubmit}>
         <div className="top">
           <div className="progressBar">
             <div />
@@ -48,16 +67,22 @@ const Register = (props: RegisterProps) => {
         <div className="middle">
           <div className="left box">
             <div className="inputBox">
-              <label htmlFor="firstname">First Name</label>
+              <label htmlFor="firstName">First Name</label>
               <input
                 type="text"
                 name="firstname"
-                value={userDetails.firstName}
+                value={userDetails.firstname}
+                onChange={updateUserDetails}
               />
             </div>
             <div className="inputBox">
               <label htmlFor="lastname">Last Name</label>
-              <input type="text" name="lastname" value={userDetails.lastName} />
+              <input
+                type="text"
+                name="lastname"
+                value={userDetails.lastname}
+                onChange={updateUserDetails}
+              />
             </div>
             <div className="inputBox">
               <label htmlFor="userType">UserType</label>
@@ -65,6 +90,7 @@ const Register = (props: RegisterProps) => {
                 name="userType"
                 id="userid"
                 defaultValue={userDetails.userType}
+                onChange={updateUserDetails}
               >
                 <option value="">Select</option>
                 <option value="Lawyer">Lawyer</option>
@@ -78,6 +104,7 @@ const Register = (props: RegisterProps) => {
                 name="gender"
                 id="gender"
                 defaultValue={userDetails.gender}
+                onChange={updateUserDetails}
               >
                 <option value="">Select</option>
                 <option value="Male">Male</option>
@@ -87,20 +114,39 @@ const Register = (props: RegisterProps) => {
             </div>
             <div className="inputBox">
               <label htmlFor="mobile">Mobile No</label>
-              <input type="text" name="mobile" value={userDetails.mobile} />
+              <input
+                type="text"
+                name="mobile"
+                onChange={updateUserDetails}
+                value={userDetails.mobile}
+              />
             </div>
             <div className="inputBox">
               <label htmlFor="adhar">Adhar No</label>
-              <input type="text" name="adhar" value={userDetails.adhar} />
+              <input
+                type="text"
+                name="adhar"
+                onChange={updateUserDetails}
+                value={userDetails.adhar}
+              />
             </div>
             <div className="inputBox">
               <label htmlFor="mail">Email </label>
-              <input type="email" name="mail" value={userDetails.email} />
+              <input
+                type="email"
+                name="email"
+                onChange={updateUserDetails}
+                value={userDetails.email}
+              />
             </div>
             {!isEdit && (
               <div className="inputBox">
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" />
+                <input
+                  type="password"
+                  name="password"
+                  onChange={updateUserDetails}
+                />
               </div>
             )}
             {!isEdit && (
@@ -112,7 +158,7 @@ const Register = (props: RegisterProps) => {
           </div>
           <div className="right box">
             <div className="preview">
-              <img src={file} alt="" />
+              <img src={fileUrl} alt="" />
             </div>
             <label htmlFor="file">Upload</label>
             <input
